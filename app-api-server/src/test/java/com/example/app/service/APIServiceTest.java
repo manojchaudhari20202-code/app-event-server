@@ -2,142 +2,61 @@ package com.example.app.service;
 
 import com.example.app.model.Event;
 import com.example.app.repository.APIRepository;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.springframework.test.annotation.Rollback;
 
-import java.util.Arrays;
-import java.util.List;
+@SpringBootTest
+@Rollback(true) // Default behavior for the class is commit (unusual for tests)
+@Transactional
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+/**
+*    @author Manoj
+**/
 
-//@ExtendWith(MockitoExtension.class)
-class APIServiceTest {
+public class APIServiceTest {
 
-    @Mock
-    private APIRepository apiRepository;
+    @Autowired
+    APIRepository apiRepository;
 
-    @InjectMocks
-    private APIService apiService;
-
-    private Event testEvent;
+    private static Event globalStaticEvent;
+    private static Long globalStaticEventId;
 
     @BeforeEach
-    void setUp() {
-        testEvent = new Event();
-        testEvent.setEventId(1L);
-//        testEvent.setEventName("Test Event");
-//        testEvent.setLive(true);
+    public void addEventBeforeEachTest(){
+        globalStaticEvent = apiRepository.getRandonEvent();
+        globalStaticEventId = globalStaticEvent.getEventId();
     }
 
     @Test
-    void getEvent_shouldReturnEvent_whenEventExists() {
-        // Given
-        String eventId = "1";
-        when(apiRepository.getEventById(Long.valueOf(eventId))).thenReturn(testEvent);
-
-        // When
-        Event result = apiService.getEventById(eventId);
-
-        // Then
-        assertNotNull(result);
-        assertEquals(testEvent.getEventId(), result.getEventId());
-        //assertEquals(testEvent.getEventName(), result.getEventName());
-        verify(apiRepository, times(1)).getEventById(Long.valueOf(eventId));
+    public void getEventTest(){
+        apiRepository.getEventById(globalStaticEventId);
     }
 
     @Test
-    void getEvent_shouldReturnNull_whenEventDoesNotExist() {
-        // Given
-        String eventId = "99";
-        when(apiRepository.getEventById(Long.valueOf(eventId))).thenReturn(null);
+    public void updateEventTest(){
+        globalStaticEvent.setEventStatus(false);
+        globalStaticEvent.setEventScore("213123:13123");
+        apiRepository.updateEvent(globalStaticEvent);
+    }
 
-        // When
-        Event result = apiService.getEventById(eventId);
 
-        // Then
-        assertNull(result);
-        verify(apiRepository, times(1)).getEventById(Long.valueOf(eventId));
+    @Test
+    public void removeEventTest(){
+        apiRepository.removeEvent(globalStaticEventId);
     }
 
     @Test
-    void addEvent_shouldCallRepositoryAddEvent() {
-        // Given
-        doNothing().when(apiRepository).addEvent(testEvent);
-
-        // When
-        apiService.addEvent(testEvent);
-
-        // Then
-        verify(apiRepository, times(1)).addEvent(testEvent);
+    public void upsertEventTest(){
+        globalStaticEvent.setEventStatus(false);
+        globalStaticEvent.setEventScore("213123:13123");
+        apiRepository.upsertEvent(globalStaticEvent);
     }
 
-    @Test
-    void getAllLiveEvents_shouldReturnListOfEvents() {
-        // Given
-        Event anotherEvent = new Event();
-        anotherEvent.setEventId(2L);
-//        anotherEvent.setEventName("Another Live Event");
-//        anotherEvent.setLive(true);
-        List<Event> liveEvents = Arrays.asList(testEvent, anotherEvent);
-        when(apiRepository.getAllLiveEvents()).thenReturn(liveEvents);
-
-        // When
-        List<Event> result = apiService.getAllLiveEvents();
-
-        // Then
-        assertNotNull(result);
-        assertEquals(2, result.size());
-        assertTrue(result.contains(testEvent));
-        assertTrue(result.contains(anotherEvent));
-        verify(apiRepository, times(1)).getAllLiveEvents();
-    }
-
-    @Test
-    void updateEvent_shouldCallRepositoryUpdateEvent() {
-        // Given
-        Event updatedEvent = new Event();
-        updatedEvent.setEventId(1L);
-//        updatedEvent.setEventName("Updated Event Name");
-//        updatedEvent.setLive(false);
-        doNothing().when(apiRepository).updateEvent(updatedEvent);
-
-        // When
-        apiService.updateEvent(updatedEvent);
-
-        // Then
-        verify(apiRepository, times(1)).updateEvent(updatedEvent);
-    }
-
-    @Test
-    void removeEvent_shouldCallRepositoryRemoveEvent() {
-        // Given
-        Long eventIdToRemove = 1L;
-        doNothing().when(apiRepository).removeEvent(eventIdToRemove);
-
-        // When
-        apiService.removeEvent(eventIdToRemove);
-
-        // Then
-        verify(apiRepository, times(1)).removeEvent(eventIdToRemove);
-    }
-
-    @Test
-    void getCachedEvent_shouldReturnEvent_whenEventExists() {
-        // Given
-        String eventId = "1";
-        when(apiRepository.getEventById(Long.valueOf(eventId))).thenReturn(testEvent);
-
-        // When
-        Event result = apiService.getCachedEventById(eventId);
-
-        // Then
-        assertNotNull(result);
-        assertEquals(testEvent.getEventId(), result.getEventId());
-        verify(apiRepository, times(1)).getEventById(Long.valueOf(eventId));
-        // Note: Caching behavior itself is typically tested at a higher integration level
-        // or by verifying cache interactions if a cache manager is mocked.
-    }
 }

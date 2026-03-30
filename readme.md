@@ -27,7 +27,7 @@ mvn clean package -DskipTests
 - cd app-api-server 
 - mvn exec:java -Dexec.mainClass="com.example.app.APIServer"
 - Mock Swagger URL ::: http://localhost:9090/swagger-ui/index.html](http://localhost:9090/swagger-ui/index.html
-- Health URL ::: http://localhost:8080/actuator/health
+- Health URL ::: http://localhost:9090/actuator/health
 
 --- 
 

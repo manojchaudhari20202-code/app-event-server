@@ -83,4 +83,12 @@ public class APIRepository implements RowMapper<Event> {
         return event;
     }
 
+    public Long getRandonEventId() {
+        return jdbcTemplate.queryForObject("SELECT EVENT_ID FROM mock_event_details ORDER BY RANDOM() OFFSET 0 ROWS FETCH NEXT 1 ROW ONLY", Long.class);
+    }
+
+    public Event getRandonEvent() {
+        return getEventById(getRandonEventId());
+    }
+
 }
