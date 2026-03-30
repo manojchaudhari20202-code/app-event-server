@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Left Navigation</title>
+</head>
+
+<body>
+    <h1>Application</h1>
+    <hr>
+    <a href="content.html" target="main_frame">Content</a>
+    <hr>
+    <h3>Quick Start</h3>
+    <ul>
+        <li>classpath ::: Java 17 + maven 3.x</li>
+        <li>run deploy.bat</li>
+        <li>Verify ::: <a href="logs/app-api-server.log" target="main_frame">API Server</a></li>
+        <li>Portal ::: <a href="http://localhost:8080/graphiql" target="main_frame">Event Server</a></li>
+        <li>run test.bat ::: <a href="../app-api-server/target/reports/surefire.html" target="main_frame">Surefire Report</a></li>
+    </ul>
+    <hr>
+    <h2>Portals</h2>
+    <ul>
+        <li><a href="http://localhost:8081/index.html" target="main_frame">Database</a></li>
+        <!--<li><a href="logs/app-message-broker.log" target="main_frame">Message Broker</a></li>-->
+        <li><a href="http://localhost:8080/graphiql" target="main_frame">Event Server</a></li>
+        <li><a href="http://localhost:9090/swagger-ui/index.html" target="main_frame">Mock Server</a></li>
+    </ul>
+    <hr>
+    <h2>Test</h2>
+    <ul>
+        <li><a href="../app-api-server/target/reports/surefire.html" target="main_frame">Test Event Server</a></li>
+    </ul>
+    <hr/>
+
+
+    <h2>Logs</h2>
+    <ul>
+        <li><a href="logs/app-infra-server.log" target="main_frame">Infra Server</a></li>
+        <li><a href="logs/app-api-server.log" target="main_frame">API Server</a></li>
+        <li><a href="logs/app-mock-server.log" target="main_frame">Mock Server</a></li>
+    </ul>
+
+    <h2>Health</h2>
+    <ul>
+        <li><a href="http://localhost:8081/actuator/health" target="main_frame">Infra Server</a></li>
+        <li><a href="http://localhost:8080/actuator/health" target="main_frame">API Server</a></li>
+        <li><a href="http://localhost:9090/actuator/health" target="main_frame">Mock Server</a></li>
+    </ul>
+
+</body>
+
+</html>

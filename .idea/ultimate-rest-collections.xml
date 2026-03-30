@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UltimateRestCollectionService">
+    <option name="rootNodes">
+      <list>
+        <node id="bcfde08e-514a-4e6c-907a-503068c5c67b" name="Default Collection" isFolder="true">
+          <option name="folder" value="true" />
+          <children>
+            <node id="402415eb-3041-45c9-ba35-fffffc5835b9" name="liveEvents">
+              <request name="liveEvents" method="POST" url="http://localhost:9090/api/liveEvents" bodyType="none">
+                <bodyContent />
+              </request>
+            </node>
+            <node id="04b6c1a3-4c12-43e8-a3a8-1c313bc276ab" name="event-eventId-14">
+              <request name="liveEvents (Copy)" method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
+                <bodyContent>eventId=14</bodyContent>
+              </request>
+            </node>
+            <node id="ca097b14-dbc3-4652-bba3-4bdf9abe5458" name="get - index">
+              <request name="get - index" url="http://localhost:9090/" bodyType="none">
+                <bodyContent />
+              </request>
+            </node>
+            <node id="331270f1-0b4f-45ce-9e03-bcd76f75196e" name="MOCK Health">
+              <request name="MOCK Health" url="http://localhost:9090/actuator/health" bodyType="none">
+                <bodyContent />
+              </request>
+            </node>
+            <node id="74a457e3-8c2a-4dca-b738-9570d6082f58" name="API Health">
+              <request name="API Health" url="http://localhost:8080/actuator/health" bodyType="none">
+                <bodyContent />
+              </request>
+            </node>
+          </children>
+        </node>
+      </list>
+    </option>
+  </component>
+</project>

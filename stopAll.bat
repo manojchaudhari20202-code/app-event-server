@@ -1,0 +1,1 @@
+PowerShell -Command "Get-Process -Name '*javaw*' | Stop-Process -Force" && status

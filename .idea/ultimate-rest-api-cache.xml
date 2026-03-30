@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UltimateRestApiCache">
+    <cachedApis>
+      <api method="GET" url="/api/database/tables" className="com.example.app.DatabaseController" methodName="getAllTables" moduleName="app-infra" />
+      <api method="POST" url="/api/database/query" className="com.example.app.DatabaseController" methodName="executeQuery" moduleName="app-infra">
+        <params>
+          <param name="body" value="{&#13;&#10;  &quot;key&quot; : &quot;value&quot;&#13;&#10;}" type="BODY" dataType="Map&lt;String, String&gt;" />
+        </params>
+      </api>
+      <api method="GET" url="/api/database/table/{tableName}" className="com.example.app.DatabaseController" methodName="getTableData" moduleName="app-infra">
+        <params>
+          <param name="tableName" value="test" type="PATH" dataType="String" />
+        </params>
+      </api>
+      <api method="POST" url="/api/event" className="com.example.app.controller.MockController" methodName="event" moduleName="app-mock-server">
+        <params>
+          <param name="body" value="&quot;&quot;" type="BODY" dataType="String" />
+        </params>
+      </api>
+      <api method="POST" url="/api/liveEvents" className="com.example.app.controller.MockController" methodName="liveEvents" moduleName="app-mock-server" />
+    </cachedApis>
+  </component>
+</project>

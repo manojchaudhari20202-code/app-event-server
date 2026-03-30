@@ -1,0 +1,13 @@
+
+type Query {
+    eventById(eventId: String): Event
+    liveEvents: [Event!]
+}
+
+type Event {
+    eventId: Int
+    eventStatus: Boolean
+    eventScore: String
+}
+
+
