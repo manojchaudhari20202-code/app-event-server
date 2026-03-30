@@ -178,3 +178,6 @@ Simulates external event provider and drives system behavior.
 
 ---
 
+# Dev Setup
+![dev-setup.png](readme-docs/dev-setup.png)
+
