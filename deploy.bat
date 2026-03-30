@@ -1,1 +1,0 @@
-stopAll.bat && build.bat && cd deploy && startAll && cd .. && status
