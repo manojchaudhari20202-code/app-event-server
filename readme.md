@@ -103,7 +103,7 @@ Simulates external event provider and drives system behavior.
 ---
 ## Data Model
 
-### API_EVENT_DETAILS and MOCK_EVENT_DETAILS [EVENT_ID GENERATE]
+### API_EVENT_DETAILS and MOCK_EVENT_DETAILS [EVENT_ID GENERATED]
 
 | Column Name  | Type      | Description             |
 | ------------ | --------- | ----------------------- |
