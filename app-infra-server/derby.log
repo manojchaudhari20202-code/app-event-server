@@ -1,14 +1,17 @@
-Mon Mar 30 17:44:56 IST 2026 : Apache Derby Network Server - 10.15.2.0 - (1873585) started and ready to accept connections on port 1527
-----------------------------------------------------------------
-Mon Mar 30 17:45:03 IST 2026:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-019d-3eab-249f-00001c2636f0 
-on database directory C:\workspace\Interview\git\final-code\app-infra-server\myDatabase with class loader org.codehaus.mojo.exec.URLClassLoaderBuilder$ExecJavaClassLoader@69cd7630 
-Loaded from file:/C:/Applications/apache-maven-3.9.11/repos/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
-java.vendor=Red Hat, Inc.
-java.runtime.version=17.0.15+6-LTS
-user.dir=C:\workspace\Interview\git\final-code\app-infra-server
-os.name=Windows 11
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
+Mon Mar 30 20:11:59 IST 2026 : Could not listen on port 1527 on host localhost:
+ java.net.BindException: Address already in use: bind
+An exception was thrown during network server startup. DRDA_ListenPort.S:Could not listen on port 1527 on host localhost:
+ java.net.BindException: Address already in use: bind
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.derby.iapi.jdbc.DRDAServerStarter.run(DRDAServerStarter.java:236)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.Exception: DRDA_ListenPort.S:Could not listen on port 1527 on host localhost:
+ java.net.BindException: Address already in use: bind
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.consolePropertyMessageWork(NetworkServerControlImpl.java:3516)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.consolePropertyMessage(NetworkServerControlImpl.java:2107)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.blockingStart(NetworkServerControlImpl.java:850)
+	... 6 more
