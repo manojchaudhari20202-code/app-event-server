@@ -13,19 +13,19 @@ mvn clean package -DskipTests
 
 ### Start Infra Server
 - cd app-infra-server 
-- mvn exec:java -Dexec.mainClass="com.example.app.AppInfraBootstrap"
+- mvn clean compile exec:java -Dexec.mainClass="com.example.app.AppInfraBootstrap"
 - DB GUI URL ::: http://localhost:8081/
 - Health URL ::: http://localhost:8081/actuator/health
 
 ### Start Mock Server
 - cd app-mock-server 
-- mvn exec:java -Dexec.mainClass="com.example.app.MockServer"
+- mvn clean compile exec:java -Dexec.mainClass="com.example.app.MockServer"
 - GraphQL GUI URL ::: http://localhost:8080/graphiql
 - Health URL ::: http://localhost:8080/actuator/health
 
 ### Start API Server
 - cd app-api-server 
-- mvn exec:java -Dexec.mainClass="com.example.app.APIServer"
+- mvn clean compile exec:java -Dexec.mainClass="com.example.app.APIServer"
 - Mock Swagger URL ::: http://localhost:9090/swagger-ui/index.html](http://localhost:9090/swagger-ui/index.html
 - Health URL ::: http://localhost:9090/actuator/health
 

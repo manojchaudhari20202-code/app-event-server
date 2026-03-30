@@ -12,14 +12,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-@RocketMQMessageListener(
-        topic = "event-topic",
-        consumerGroup = "event-consumer-group",
-        consumeMode = ConsumeMode.CONCURRENTLY,
-        consumeThreadNumber = 100,
-        consumeThreadMax = 100
-)
+//@Component
+//@RocketMQMessageListener(
+//        topic = "event-topic",
+//        consumerGroup = "event-consumer-group",
+//        consumeMode = ConsumeMode.CONCURRENTLY,
+//        consumeThreadNumber = 100,
+//        consumeThreadMax = 100
+//)
 public class APIEventMessageProcessor implements RocketMQListener<Event> {
 
     private final Logger logger = LoggerFactory.getLogger(APIEventMessageProcessor.class);

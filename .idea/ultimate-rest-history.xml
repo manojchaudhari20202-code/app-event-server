@@ -3,70 +3,266 @@
   <component name="UltimateRestHistory">
     <items>
       <historyItem>
-        <option name="timestamp" value="1774828890894" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
+        <option name="timestamp" value="1774882910526" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>235</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882907294" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>235</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882905207" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>235</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882904566" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>235</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882900591" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>eventId: 235</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882882647" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>{
+    eventId: 235
+}</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882859957" />
+        <request method="POST" url="http://localhost:8080/events/status">
+          <bodyContent>235</bodyContent>
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882838278" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
           <bodyContent />
         </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882837382" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882657951" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882649910" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882649678" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882627366" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882621063" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882593047" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882592807" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882592534" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882591695" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882568447" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882567758" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882566998" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882563623" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882562575" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882436254" />
+        <request method="POST" url="http://localhost:8080/api/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882435366" />
+        <request method="POST" url="http://localhost:8080/api/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882429109" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882428453" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882399190" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882398183" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882366679" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882358414" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882357598" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882355847" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882350166" />
+        <request method="POST" url="http://localhost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882338318" />
+        <request method="POST" url="http://loclahost:8080/events/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774882320405" />
+        <request method="POST" url="http://loclahost:8080/event/status" bodyType="none">
+          <bodyContent />
+        </request>
+      </historyItem>
+      <historyItem>
+        <option name="timestamp" value="1774828890894" />
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828889951" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828887664" />
-        <request url="http://localhost:9090/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:9090/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828852350" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828852151" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828851671" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828851478" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828850270" />
-        <request url="http://localhost:8080/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:8080/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828835783" />
-        <request url="http://localhost:9090/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:9090/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828826351" />
-        <request url="http://localhost:9090/actuator/health" bodyType="none">
-          <bodyContent />
-        </request>
+        <request url="http://localhost:9090/actuator/health" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774828456174" />
-        <request method="POST" url="http://localhost:9090/api/liveEvents" bodyType="none">
-          <bodyContent />
-        </request>
+        <request method="POST" url="http://localhost:9090/api/liveEvents" bodyType="none" />
       </historyItem>
       <historyItem>
         <option name="timestamp" value="1774827870273" />
@@ -84,288 +280,6 @@
         <option name="timestamp" value="1774827795239" />
         <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
           <bodyContent>eventId=12</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791484051" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791483802" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791483580" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791483372" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791483164" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791482893" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791451363" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791451043" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791450828" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791450380" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791437869" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=11</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791434972" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791434484" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791433740" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="raw (text)">
-          <bodyContent>eventId=14</bodyContent>
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791385796" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791384227" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791354595" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791326468" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791325908" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=12" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="12" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791310237" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791290979" />
-        <request url="http://localhost:9090/" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791290652" />
-        <request url="http://localhost:9090/" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791290292" />
-        <request url="http://localhost:9090/" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791282252" />
-        <request method="POST" url="http://localhost:9090/api/liveEvents" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791282044" />
-        <request method="POST" url="http://localhost:9090/api/liveEvents" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791281260" />
-        <request method="POST" url="http://localhost:9090/api/liveEvents" bodyType="none">
-          <bodyContent />
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791266509" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=14" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="14" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791266003" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=14" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="14" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791265788" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=14" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="14" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791265396" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=14" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="14" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791257308" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=14" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="14" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791256619" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId=14" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="14" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791230076" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791229837" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791229027" />
-        <request method="POST" url="http://localhost:9090/api/event?eventId" bodyType="none">
-          <bodyContent />
-          <params>
-            <param name="eventId" value="" type="QUERY" dataType="String" />
-          </params>
-        </request>
-      </historyItem>
-      <historyItem>
-        <option name="timestamp" value="1774791214917" />
-        <request method="POST" url="http://localhost:9090/api/event" bodyType="none">
-          <bodyContent />
         </request>
       </historyItem>
     </items>

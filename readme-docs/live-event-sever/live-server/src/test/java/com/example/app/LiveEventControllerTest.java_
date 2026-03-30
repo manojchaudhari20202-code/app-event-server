@@ -1,0 +1,64 @@
+package com.example.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.web.servlet.MockMvc;
+
+@WebMvcTest(LiveEventController.class)
+public class LiveEventControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private LiveEventService service;
+
+    @Test
+    void shouldReturnSuccessForValidEvent() throws Exception {
+        String json = """
+                    {"eventId":"101","live":true}
+                """;
+
+        mockMvc.perform(post("/events/status")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json))
+                .andExpect(status().isOk())
+                .andExpect(content().string("SUCCESS"));
+
+        verify(service).updateCache("101", true);
+    }
+
+    @Test
+    void shouldReturnFailedForInvalidEvent() throws Exception {
+        String json = """
+                    {"eventId":"abc","live":true}
+                """;
+
+        mockMvc.perform(post("/events/status")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json))
+                .andExpect(content().string("FAILED"));
+    }
+
+    @Test
+    void shouldReturnAllLiveEvents() throws Exception {
+        when(service.getAllEventsFromLiveCache()).thenReturn(List.of(new LiveEvent()));
+
+        mockMvc.perform(post("/events/live"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray());
+    }
+
+    @Test
+    void shouldReturnEventFromCache() throws Exception {
+        LiveEvent event = new LiveEvent();
+        event.setEventId("101");
+
+        when(service.getFromCache("101")).thenReturn(event);
+
+        mockMvc.perform(post("/events/get")
+                        .content("101"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].eventId").value("101"));
+    }
+
+}

@@ -1,11 +1,8 @@
 package com.example.app;
 
-import com.example.app.graphql.APIController;
-import com.example.app.util.APIIntegrationClient;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.CacheManager;
@@ -19,9 +16,6 @@ import java.util.concurrent.TimeUnit;
 public class APIServer {
 
     private final Logger logger = LoggerFactory.getLogger(APIServer.class);
-
-    @Autowired
-    APIIntegrationClient apiIntegrationClient;
 
     public static void main(String[] args) {
         SpringApplication.run(APIServer.class, args);

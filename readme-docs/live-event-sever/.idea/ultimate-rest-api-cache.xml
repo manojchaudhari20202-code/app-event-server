@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UltimateRestApiCache">
+    <cachedApis>
+      <api method="POST" url="/mock-api/eventScore" className="com.example.app.MockController" methodName="event" moduleName="mock-server">
+        <params>
+          <param name="body" value="&quot;&quot;" type="BODY" dataType="String" />
+        </params>
+      </api>
+    </cachedApis>
+  </component>
+</project>

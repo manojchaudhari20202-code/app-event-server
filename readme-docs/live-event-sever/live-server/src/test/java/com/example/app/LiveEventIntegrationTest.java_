@@ -1,0 +1,38 @@
+package com.example.app;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class LiveEventIntegrationTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
+    private LiveEventService service;
+
+    @Test
+    void shouldStoreAndFetchEvent() throws Exception {
+
+        mockMvc.perform(post("/events/status")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""{"eventId":"200","live":true}"""))
+                .andExpect(status().isOk());
+
+        mockMvc.perform(post("/events/get")
+                        .content("200"))
+                .andExpect(jsonPath("$[0].eventId").value("200"));
+    }
+
+    @Test
+    void shouldReflectCacheStateAcrossCalls() {
+        service.updateCache("300", true);
+        assertEquals(1, service.getAllEventsFromLiveCache().size());
+    }
+
+}

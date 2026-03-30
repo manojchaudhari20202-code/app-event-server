@@ -1,0 +1,47 @@
+package com.example.app;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
+public class LiveEventListenerTest {
+
+    @InjectMocks
+    private LiveEventListener listener;
+
+    @Mock
+    private LiveEventService service;
+
+    @Test
+    void shouldUpdateScoreOnMessage() {
+        LiveEvent existing = new LiveEvent();
+        existing.setEventId("101");
+
+        when(service.getFromCache("101")).thenReturn(existing);
+
+        LiveEvent incoming = new LiveEvent();
+        incoming.setEventId("101");
+        incoming.setCurrentScore("100/2");
+
+        listener.onMessage(incoming);
+
+        assertEquals("100/2", existing.getCurrentScore());
+    }
+
+    @Test
+    void shouldHandleNullEventGracefully() {
+        when(service.getFromCache("101")).thenReturn(null);
+
+        LiveEvent incoming = new LiveEvent();
+        incoming.setEventId("101");
+
+        assertDoesNotThrow(() -> listener.onMessage(incoming));
+    }
+
+}

@@ -11,16 +11,16 @@ public class APIIntegrationClient {
 
     private final Logger logger = LoggerFactory.getLogger(APIIntegrationClient.class);
 
-    private final RestClient restClient;
+        private final RestClient restClient;
 
-    public APIIntegrationClient() {
-        this.restClient = RestClient.builder().baseUrl("http://localhost:9090/api").build();;
-        try {
-            getAsyncRemoteLiveEvents();
-        } catch (Exception e) {
-            logger.error("ERROR TRY AFTER SOME TIME ::: ", e);
+        public APIIntegrationClient() {
+            this.restClient = RestClient.builder().baseUrl("http://localhost:9090/api").build();;
+            try {
+                getAsyncRemoteLiveEvents();
+            } catch (Exception e) {
+                logger.error("ERROR TRY AFTER SOME TIME ::: ", e);
+            }
         }
-    }
 
     public Event getRemoteEventStatus(String eventId) {
         String result = this.restClient.post()

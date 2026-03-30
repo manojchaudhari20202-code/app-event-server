@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UltimateRestCollectionService">
+    <option name="rootNodes">
+      <list>
+        <node id="94e567ec-9bca-4722-b4b7-f94787cd8a54" name="Default Collection" isFolder="true">
+          <option name="folder" value="true" />
+          <children>
+            <node id="316730c4-77f9-46d5-ac0c-abda88825c70" name="new live">
+              <request name="new live" method="POST" url="http://localhost:8080/events/status">
+                <bodyContent>{
+  &quot;eventId&quot;: &quot;344666&quot;,
+  &quot;live&quot;: false
+
+}</bodyContent>
+              </request>
+            </node>
+            <node id="e2c4224e-98a5-4592-97e9-6cc294b185c0" name="getall">
+              <request name="getall" method="POST" url="http://localhost:8080/events/live" />
+            </node>
+            <node id="71ddb56d-e26a-4962-bc45-c2d75af689f6" name="get live">
+              <request name="get live" method="POST" url="http://localhost:8080/events/get">
+                <bodyContent>2323</bodyContent>
+              </request>
+            </node>
+          </children>
+        </node>
+      </list>
+    </option>
+  </component>
+</project>

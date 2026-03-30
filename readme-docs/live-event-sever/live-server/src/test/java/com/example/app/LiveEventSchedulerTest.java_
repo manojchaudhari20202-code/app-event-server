@@ -1,0 +1,58 @@
+package com.example.app;
+
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.List;
+
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
+public class LiveEventSchedulerTest {
+
+    @Mock
+    private LiveEventService service;
+
+    @Mock
+    private RocketMQTemplate rocketMQTemplate;
+
+    @InjectMocks
+    private LiveEventScheduler scheduler;
+
+    @Test
+    void shouldSendEventsToRocketMQ() throws Exception {
+        when(service.getAllEventIdsFromLiveCache())
+                .thenReturn(List.of("101"));
+
+        scheduler.prepareLiveMockData();
+
+        verify(service).getAllEventIdsFromLiveCache();
+    }
+
+    @Test
+    void fullFlow_shouldWork() {
+        given()
+                .contentType("application/json")
+                .body("""
+                        {"eventId":"500","live":true}
+                 """)
+                .when()
+                .post("/events/status")
+                .then()
+                .statusCode(200);
+
+        given()
+                .body("500")
+                .when()
+                .post("/events/get")
+                .then()
+                .body("[0].eventId", equalTo("500"));
+    }
+
+}
